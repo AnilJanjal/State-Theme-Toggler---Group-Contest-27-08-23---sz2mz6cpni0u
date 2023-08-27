@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import "../styles/App.css";
 
 export default function App() {
+    const [theme, setTheme] = useState("light");
+  const handleThemeToggle = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
     return (
         <div className="App">
             <h1>Newton School</h1>
